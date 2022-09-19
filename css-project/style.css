@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f5d5d;
+  margin-top: 10px;
+}
+.main-container {
+  background-color: white;
+  width: 30%;
+  /* outline: blue 1px solid; */
+  margin: auto;
+  height: auto;
+}
+div p {
+  text-align: end;
+  font-size: 17px;
+  margin: 7px;
+  color: #c1c1c1;
+}
+.main-container > img {
+  outline: 2px solid #63d18a;
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 50vh;
+}
+div .name {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+.middle {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  background-color: #f3f3f3;
+  align-items: center;
+}
+.main-container .middle img {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+.middle p {
+  text-align: center;
+  color: #4e4f53;
+}
+.pricing {
+  padding: 12px 0 8px 0;
+  background-color: rgb(255, 255, 255);
+}
+.pricing p {
+  text-align: center;
+  color: #4c4f52;
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #f3f3f3;
+  align-items: center;
+}
+.buttons div {
+  text-align: center;
+  padding: 18px;
+}
+.call {
+  background-color: #66d189;
+}
+.text {
+  background-color: #5abd7c;
+}
+
+footer  {
+  width: 10%;
+  height: 20px;
+  margin-top: 200px;
+  margin: auto;
+  font-size: 10px;
+  text-align: center;
+  color: rgb(135, 163, 147);
+}
+footer p{
+    margin: 0;
+}
+@media only screen and (max-width: 600px) {
+  .main-container {
+    background-color: white;
+    width: 40%;
+    /* outline: blue 1px solid; */
+    margin: auto;
+    height: auto;
+  }
+  div p {
+    font-size: 9px;
+  }
+
+  div .name {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .pricing p {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .buttons div {
+    text-align: center;
+    padding: 8px;
+  }
+  .call {
+    background-color: #66d189;
+  }
+  .text {
+    background-color: #5abd7c;
+  }
+
+  footer p {
+    font-size: 8px;
+  }
+}

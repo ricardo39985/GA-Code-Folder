@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+.square {
+  outline-style: auto;
+  outline-width: 1px;
+  outline-color: black;
+  height: 32%;
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 90px;
+
+}
+.board {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+}
+
+
