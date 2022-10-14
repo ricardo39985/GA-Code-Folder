@@ -1,0 +1,30 @@
+body {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  width: 22%;
+  height: 72px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 12px;
+}
+.container div {
+  width: 80px;
+  height: 80px;
+  font-size: 72px;
+  margin: 12px;
+  background-color: rgb(170, 169, 167);
+  border-radius: 12px;
+}
+h1 {
+  font-size: 62px;
+}

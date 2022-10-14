@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%=title %>
+  </title>
+</head>
+
+<body>
+  <div class="container border border-primary mt-4 rounded" style="width: 25%;">
+    <div class="row justify-content-md-center">
+      <div class="d-flex flex-column">
+        <div class="text-center">
+
+          <h1>Todos</h1>
+          <h2>
+            <%= time %>
+
+          </h2>
+        </div>
+        <div class="">
+          <ul class="list-group list-group-flush ">
+            <% todos.forEach(todo=> {%>
+              <li class="list-group-item">
+                <div class="d-flex flex-row justify-content-sm-between"">
+
+                  <a href=" /todos/<%=todo.id %> ">
+                  <%=todo.todo %>
+                    </a>
+                    <div class="text-start">
+
+                      <%if (todo.done) {%>
+                        <span class="text-success">
+                          done
+                        </span>
+                        <% }else {%>
+                          <span class="text-danger">
+                            not done
+                          </span>
+                          <% } %>
+                    </div>
+                    <div class="d-flex justify-content-around"  >
+                      <a href="todos/<%=todo.id%>/edit " style=" margin-right: 3px;" class=" m-2 mr-2 btn btn-primary btn-sm">Edit</a>
+                      <!-- <form style="border: 0; width: 15%" class="delete-form fs-6 form-control d-flex justify-content-end"
+                        action="/todos//edit" method="POST">
+                        <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                      </form> -->
+                      <form style="border: 0; width: 15%; ;" class="delete-form fs-6 form-control d-flex justify-content-end"
+                        action="/todos/<%= todo.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger btn-sm">X</button>
+                      </form>
+
+                    </div>
+                </div>
+              </li>
+              <%}); %>
+          </ul>
+        </div>
+        <div class="mb-2 text-center">
+          <a href="/todos/new" class="btn btn-primary mt-2 ">Add new Tod-do</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+''
